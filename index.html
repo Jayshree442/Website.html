@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood Switch Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+
+    <h1>✨ Choose Your Mood ✨</h1>
+    <p>Click a mood and watch the magic happen!</p>
+
+    <div class="buttons">
+        <button onclick="setMood('dark')">🌙 Dark</button>
+        <button onclick="setMood('sunset')">🌅 Sunset</button>
+        <button onclick="setMood('ocean')">🌊 Ocean</button>
+        <button onclick="setMood('pastel')">🌸 Pastel</button>
+    </div>
+
+    <script>
+        function setMood(mood) {
+            const body = document.getElementById("body");
+
+            body.className = "";
+
+            if (mood === "dark") {
+                body.classList.add("dark");
+            }
+            if (mood === "sunset") {
+                body.classList.add("sunset");
+            }
+            if (mood === "ocean") {
+                body.classList.add("ocean");
+            }
+            if (mood === "pastel") {
+                body.classList.add("pastel");
+            }
+        }
+    </script>
+
+</body>
+</html>
